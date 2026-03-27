@@ -41,7 +41,7 @@ TASK_INFO = {
     },
     "yandexplus": {
         "name": "🌟 ЯНДЕКС ПЛЮС (ПОДПИСКА ЗА 1 РУБЛЬ)",
-        "description": "Оформи подписку Яндекс Плюс за 1 рубль\n🔑 ПРОМОКОД: 328652SPMA\n(если ссылка не открывается, выключи VPN)",
+        "description": "Оформи подписку Яндекс Плюс за 1 рубль\n\n🔑 <b>ПРОМОКОД:</b> <code>328652SPMA</code>\n(если ссылка не открывается, выключи VPN)",
         "link": "https://vk.cc/cVUMu5",
         "button": "🌟 ОФОРМИТЬ ЯНДЕКС ПЛЮС"
     },
@@ -82,7 +82,8 @@ def generate_skins_message() -> str:
     message = "🎁 ТВОИ СКИНЫ CS2:\n\n"
     for i, skin in enumerate(skins, 1):
         message += f"{i}. {skin}\n"
-    message += f"\n💎 Общая стоимость: ~{sum([random.randint(1000, 2000) for _ in range(5)]):,}₽"
+    total = sum([random.randint(1000, 2000) for _ in range(5)])
+    message += f"\n💎 Общая стоимость: ~{total:,}₽"
     return message
 
 def is_trade_link(text: str) -> bool:
@@ -420,7 +421,7 @@ def main():
     print("📋 Задания по порядку:")
     print("   1. Яндекс Браузер")
     print("   2. СберПрайм")
-    print("   3. Яндекс Плюс (промокод 328652SPMA)")
+    print("   3. Яндекс Плюс (промокод 328652SPMA) - <code> для копирования")
     print("   4. 24TV")
     print("🎁 Награда: 5 случайных скинов CS2 (1000-2000₽ каждый)")
     print("⏰ Напоминания: через 1 и 2 часа бездействия")
